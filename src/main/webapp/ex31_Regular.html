@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규식 : Regular</title>
+</head>
+<body>
+<!-- 
+			정규식 :특정한 규칙을 가진 문자열의 집합을 표현하는데 사용
+						일반적으로 문자열에서 원하는 문자열을 검색하거나
+						치환하거나 , 추출하기 위한 패턴을 정의하고자 사용
+						입력값에 대한 검증 작업과 같은 특정 형태의 입력값을
+						필터링 할 때 유용하다.
+						
+		 i 			: 대소문자 구별하지 않는다
+		 
+		test() : 부합하면  true  , 아니면 false 
+		exec() : 정규식 패턴에 맞는 문자열을 탐색을 수행하는 메서드
+					내용이 없으면 아무것도 담지 않는다.
+		match() :  검색된 문자열의 배열을 리턴
+					  내용이 없으면 아무것도 담지 않는다.
+					  
+		{n} : 앞에 오는 문자가 n번 연속해서 나오는  경우
+		{n,}: 앞에 오는 문자가 최소 n번 연속해서 나오는  경우			  
+		{m,n} : 앞에 오는 문자가 최소 m번, 최대 n번 연속해서 나오는 경우 
+					
+		/////////////////////////////////////////////////////////
+		\d  => 0-9 			
+		
+ -->
+ 
+ 		<h2>결과 보기: <span id = "demo1"></span></h2>
+ 		<h2>결과 보기: <span id = "demo2"></span></h2>
+ 		<h2>결과 보기: <span id = "demo3"></span></h2>
+ 		<h2>결과 보기: <span id = "demo4"></span></h2>
+ 		<h2>결과 보기: <span id = "demo5"></span></h2>
+ 		<h2>결과 보기: <span id = "demo6"></span></h2>
+ 
+ 	<script type="text/javascript">
+ 				var name = ' korea Kenderick B Jung';
+ 				// var namePattern = /Kenderick/ ;    //true 
+ 				// var namePattern = /Kendercick/ ;  //false  글자가 틀려서
+ 				//	var namePattern = /kenderick/ ;   //false	  대소문자
+ 				//	var namePattern = /kenderick/i	   //true
+ 				
+ 					//var namePattern = /korea/	   //true
+ 					var namePattern = /kenderick/	   //true
+ 					var namePattern2 = /(k)/ ;
+ 					var namePattern3 = /(k)/g ;
+ 				
+ 				
+ 				document.getElementById("demo1").innerHTML
+ 				= namePattern.test(name);
+ 				
+ 				document.getElementById("demo2").innerHTML
+ 				= namePattern.exec(name);
+ 				
+ 				document.getElementById("demo3").innerHTML
+ 				= name.match(name); 
+ 				
+ 				
+ 				/////////////////////////////////////////////////////////////
+ 			
+ 				var text ="Amaaaaaaazing" ;
+			 	var k1 = text.match(/ma{2}/);
+ 				
+ 				document.getElementById("demo4").innerHTML= k1;
+ 				
+ 				var k2 = text.match(/ma{2,}/);
+ 				document.getElementById("demo5").innerHTML= k2;
+ 				
+ 				
+ 				var k3 = text.match(/ma{2,4}/);
+ 				document.getElementById("demo6").innerHTML= k3;
+ </script>
+ 		
+
+</body>
+</html>

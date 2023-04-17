@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>operator : 연산자</title>
+<script type="text/javascript">
+
+			//산술 연산자 (+,-,*,/,%)
+			
+			var su1  = 7 ;
+			var su2  = 3 ;
+			document.write("<h2>")
+			document.write("<p> 산술 연산자 </p>")
+			document.write(su1 , "+" , su2, "=" , (su1+su2)+ "<br>");
+			document.write(su1 , "-" , su2, "=" , (su1-su2)+ "<br>");
+			document.write(su1 , "*" , su2, "=" , (su1*su2)+ "<br>");
+			document.write(su1 , "/" , su2, "=" , (su1/su2)+ "<br>");
+			document.write(su1 , "%" , su2, "=" , (su1%su2)+ "<br>");
+			document.write("<hr>")
+			
+			// 관계 연산자 (>,>= <,<= ==,!= : 결과는 항상 boolean 형 )
+			
+
+			document.write("<p> 관계 연산자 </p>")			
+			document.write(su1 , ">" , su2, "=" , (su1>su2)+ "<br>");
+			document.write(su1 , ">=" , su2, "=" , (su1>=su2)+ "<br>");
+			document.write(su1 , "<" , su2, "=" , (su1<su2)+ "<br>");
+			document.write(su1 , "<=" , su2, "=" , (su1<=su2)+ "<br>");
+			document.write(su1 , "==" , su2, "=" , (su1==su2)+ "<br>");
+			document.write(su1 , "!=" , su2, "=" , (su1!=su2)+ "<br>");
+			document.write("<hr>")
+			document.write("</h2>")
+
+			
+			document.write("<p>==== 관계연산자 주의 사항 ====</p>")
+			var k1 = 1000;
+			var k2 = "1000";
+			
+			document.write(k1 , "==" , k2, "=" , (k1==k2)+ "<br>");
+			document.write(k2 , "!=" , k2, "=" , (k1!=k2)+ "<br>");
+			
+			var d1 = true;
+			var d2 = 1;
+			
+			document.write(d1 , "==" , d2, "=" , (d1==d2)+ "<br>");
+			document.write(d1 , "!=" , d2, "=" , (d1!=d2)+ "<br>");
+			
+			var d3 = false;
+			var d4 = 0;
+			
+			document.write(d3 , "==" , d4, "=" , (d3==d4)+ "<br>");
+			document.write(d3 , "!=" , d4, "=" , (d3!=d4)+ "<br>");
+			document.write("<hr>")
+			
+			
+			// 해결 : ===  는 자료형과 데이터 모두가 일치해야만 true가 된다.
+			
+				document.write(k1 , "==" , k2, "=" , (k1==k2)+ "<br>");
+				document.write(k1 , "===" , k2, "=" , (k1===k2)+ "<br>");
+				
+				
+				// 논리 연산자 (&&, || . !)
+				// &&(논리곱)  : 주어진 조건들이 모두 참일때만 결과는 참
+				// ||(논리합)  : 주어진 조건들중 하나만 참이여도 결과는 참
+				// ! (논리부정) : 참을 거짓으로 , 거짓을 참으로 변경
+				
+				su1 =true;
+				su2 = false;
+				document.write("<p> 논리 연산자 </p>")
+
+				document.write(su1 , "&&" , su1, "=" , (su1&&su1)+ "<br>");
+				document.write(su1 , "&&" , su2, "=" , (su1&&su2)+ "<br>");
+				document.write(su2 , "&&" , su1, "=" , (su2&&su1)+ "<br>");
+				document.write(su2 , "&&=" , su2, "=" , (su2&&su2)+ "<br>");
+				document.write("<hr>")
+				
+				document.write(su1 , "||" , su1, "=" , (su1||su1)+ "<br>");
+				document.write(su1 , "||" , su2, "=" , (su1||su2)+ "<br>");
+				document.write(su2 , "||" , su1, "=" , (su2||su1)+ "<br>");
+				document.write(su2 , "||" , su2, "=" , (su2||su2)+ "<br>");
+			document.write("<hr>")
+			
+			
+			
+			//  증감연산자 ( ++ 변수 , --변수, 변수**, 변수 --)
+			su1 = 10;
+			su2 = 10;
+			
+			document.write("<p> 증감 연산자 </p>")
+			document.write("su1 =" , ++su1 + "<br>");
+			document.write("su2 =" , su2++ + "<br>");
+			document.write("su1 =" +su1 +"<br>");
+			document.write("su2 =" + su2 +"<br>");
+			
+			document.write("<hr>")
+			
+			
+			// 삼항연산자 (결과 = 조건식?참일때 : 거짓일때)
+			// 자바에서는 결과 ,참일때 , 거짓일때 모두 같은 자료형이어야만 했다.
+			// 자바스크립트는 자료형과 상관없이 모두 저장 가능
+			
+			document.write("<p> 삼항 연산자 </p>")
+			
+			su1 = 55 ;
+			// su1 이 60 이상이면 합격,아니면 불합격
+			
+			var result = (su1>=60)? "합격":"불합격";
+			document.write("<p>결과 :" + result+"</p>");
+			
+			result = (su1>=60)? "합격" :  247;
+			document.write("<p>결과 :" + result+"</p>");
+			
+			document.write("<hr>")
+			
+			// 문자열과 + 연산 : 자바처럼  문자열이 된다. 
+			var str1 = "100";
+			var str2 = 100;
+			document.write("<p>문자 연결자 </p>")
+			document.write("결과 : " + (str1 + 10) + "</p>")
+			document.write("결과 : " + (str2 + 10) + "</p>")
+			
+			document.write("<hr>")
+			document.write("</h2>")
+			
+			
+			
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

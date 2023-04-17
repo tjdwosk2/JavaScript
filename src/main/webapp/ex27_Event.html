@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+				
+				<button id = "mybtn"> 클릭</button>
+				<p id ="demo1"></p>
+				<p id ="demo2"></p>
+				<script type="text/javascript">
+					// addEventListener("" ,function(){})
+					document.getElementById("mybtn").addEventListener("click" , disp);     //클릭을 하면 disp 메서드를 실행해주세요
+					function disp() {
+						document.getElementById("demo1").innerHTML = 	new Date().toLocaleString();
+						// demo1에 날짜시간 집어 넣으세요!
+					}
+					
+					//2가지로 하는게 아니라 1가지로 하는법
+					
+					document.getElementById("mybtn").addEventListener("click" , function() {
+						document.getElementById("demo2").innerHTML = 	new Date().toLocaleString();
+					}); 
+				
+				</script>
+				
+				
+				
+</body>
+</html>

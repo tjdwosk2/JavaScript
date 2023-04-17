@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+<script type="text/javascript">
+    // 변수 : 자료형을 지정하지 않는다.
+    //           숫자로 시작할 수 없다.
+    //          대소문자를 구분한다.(KOR, kor , Kor는 모두 다르다 )
+    //           변수는 소문자로 시작 
+    //           상수는 대문자로 시작
+    //     ***여러문자일 경우 표기 법 : 카멜표기법 , 
+    //          카멜 : myFirstVariable     = 첫 단어를 제외한 나머지 단어의 첫 글자만 대문자로 표시, 나머지는 모두 소문자
+    //          팟홀 : my_FirstVariable   = 모두 소문자로 표시하고, 단어를 연결할 때 underline() 사용
+    //          문장 뒤에 세미클론을 찍는다. (생략가능)
+
+    // 변수 생성
+    // var 변수이름 = 데이터(정수,실수,boolean,char,string,null,function,class)
+    
+    var res = 1; // 정수
+    document.write("<h3>res=  " + res + "</h3>");
+
+    res = 3.14 ;
+    document.write("<h3>res=  " , res , "</h3>"); // 콤마 가능
+
+    res = true ;
+    document.write("<h3>res=  " + res + "</h3>");
+
+    res = 'c';
+    document.write("<h3>res=  " + res + "</h3>");
+
+    res = "MyBoys"
+    document.write("<h3>res=  " + res + "</h3>");
+
+    res = null ;
+    document.write("<h3>res=  " + res + "</h3>");
+
+    // 선언하지 않아도 사용 가능
+    res2 ="Hellojava Script"
+    document.write("<h3>res=  " + res2 + "</h3>");
+
+    // 선언 후 데이터를 저장하지 않으면 undefinded
+    var res3 ;
+    document.write("<h3>res=  " + res3 + "</h3>");
+
+    // 1. 과 2. 의 차이점 
+    // 1. 
+    var data1 = 10;
+    var data1 = 20;
+    var data1 = 30;
+
+    var data2 = 10;
+   		  data2 = 20;
+    	  data2 = 30;
+
+    document.write("<hr>");
+    document.write("<p> data1 = " , data1 +"</p>");
+    document.write("<p> data2 = " , data2 +"</p>");
+
+</script>
+</head>
+<body>
+    <h2>Hello</h2>
+    <h2><p>안녕하세요</p></h2>
+</body>
+</html>

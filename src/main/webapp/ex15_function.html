@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 매개 변수를 함수로 사용하기</title>
+<script type="text/javascript">
+		// 매개 변수를 함수로 사용
+		function exec(func) {
+			
+			// func 함수 호출 
+			
+			
+				func ();
+		}
+		function hello_1() {
+			document.write("즐거운 오전 입니다.");
+		}
+		function hello_2() {
+			document.write("점심식사는 하셨나요?");
+		}
+		function hello_3() {
+			document.write("즐거운 호구가 되세요");
+		}
+		function hello_4() {
+			document.write("안녕히 주무세요");
+		}
+	
+
+
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+				var time = 15;
+				var k = '';
+				if (time<12) {
+					k =	exec(hello1);
+				}else if(time>= 12 && time <=14){
+				 	k =	hello_2();
+				}else if (time >= 15 && time<=19){
+					k = hello_3();
+				}else if (time>=20){
+					k = hello_4();
+				}
+				exec(k);
+
+
+</script>
+
+</body>
+</html>

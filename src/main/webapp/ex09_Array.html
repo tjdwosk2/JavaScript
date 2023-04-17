@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 : Array()</title>
+
+<script type="text/javascript">
+			// 배열 : 크기를 지정하지 않아도 된다 .몯느 자료를 담을 수 있다.
+			// 			 별도로 배열 표시를 하지 않는다 .
+			
+			//  방법 1
+			
+			var arr  = new Array();
+			arr[0] = 10 ;
+			arr[1] = true ;
+			arr[2] = 'A';
+			arr[3] = '한국 ICT 인재 개발원';
+			arr[4] = 186.21;
+			
+			// 출력 
+			for (var i = 0; i < arr.length; i++) {
+				document.write(arr[i]+"&nbsp;&nbsp;&nbsp;");
+			}
+			document.write("<hr>")
+			
+			//자바의 foreach와 비슷한 사용법은은 다르다
+			// var k는 index 값이다.
+			
+			for ( var k in arr) {
+				//	document.write(k + "&nbsp;&nbsp;&nbsp;");
+				document.write(arr[k]+ "&nbsp;&nbsp;&nbsp;");
+				
+			}
+			document.write("<hr>")
+			
+			
+			// 방법 2
+			var arr2 = ["포도" , 15,false, 'k' , 89.8];
+			for ( var k in arr2) {
+			    document.write(arr2[k]+"&nbsp;&nbsp;&nbsp;");
+			}
+			
+			//방법 3
+			var myData="jsp,java,html,css,javascript,spring";
+			var myArr = myData.split(',');
+			document.write(myArr);
+			document.write("<hr>");
+			for(var k in myArr){
+			    document.write(myArr[k]+"&nbsp;&nbsp;&nbsp;");
+			}
+			document.write("<hr>");
+
+
+			//배열을 문자열로 변경
+			//배열.join('구분자')
+			var myArr2 = ["포도", "15", "false", 'k', "89.8"];
+			var myData2 = myArr2.join(',');
+			document.write(myData2);
+			document.write("<hr>");
+			
+			
+			// 자바 스크립트에서 배열은 추가 삭제가 가능 
+			var myArr3 = ["java","html","css","js"];
+			
+			//추가
+			myArr3.push("jsp");
+			
+			
+			//삭제
+			//myArr3.pop();
+			for ( var k in myArr3) {
+	
+			document.write(myArr3[k]+ "<br>");
+				
+			}
+			document.write("<hr>")
+			
+			
+			
+			
+			
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

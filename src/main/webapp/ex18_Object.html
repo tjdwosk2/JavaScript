@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object</title>
+<script type="text/javascript">
+
+// 자바스크립트에서는 객체를 Obgect 라고 하고.
+// properties(상태값)과 function(기능)을 가지고 있다
+//방법3 ; htis를 호출할댸 해당 this가 결정된다
+//            실행중에는 할당으로 설정할 수 없고 함수를 호출할 대 마다 다를 수 있습니다.
+//           자기자신을 지칭하는 것이아니라 호출한 객체를 지칭한다.
+
+	var obj = new Object();
+	obj["name"] = "홍길동";
+	obj["age"] = 14;
+	obj["addr"] = "서울";
+	obj["salary"] = 3600;
+
+	document.write("<p>" + obj["name"] + "</p>");
+
+	document.write("<p>" + obj["age"] + "</p>");
+
+	document.write("<p>" + obj["addr"] + "</p>");
+
+	document.write("<p>" + obj["salary"] + "</p>");
+	document.write("<hr>");
+
+	var obj2 = {
+		name : "엄꺽정",
+		age : "24",
+		addr : "함경도",
+		salary : 4500
+	};
+	document.write("<p>" + obj2["name"] + "</p>");
+
+	document.write("<p>" + obj2["age"] + "</p>");
+
+	document.write("<p>" + obj2["addr"] + "</p>");
+
+	document.write("<p>" + obj2["salary"] + "</p>");
+	document.write("<hr>");
+
+	var obj3 = {
+		name : "응애",
+		age : 38,
+		job : function() {
+			return this.age - 24;
+		},
+		prn : function() {
+			return this.name + ", " + this.age + ", " + this.job();
+		}
+	}
+
+	document.write("<p>" + obj3["name"] + "</p>");
+	document.write("<p>" + obj3["age"] + "</p>");
+
+	document.write("<p>" + obj3.job() + "</p>");
+
+	document.write("<p>" + obj3.prn() + "</p>");
+	document.write("<hr>");
+	
+
+    
+    
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

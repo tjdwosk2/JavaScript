@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DateClass</title>
+<script type="text/javascript">
+
+				document.write("날짜 :" + new Date() +"<br>");
+				// 월은 +1  0-11 
+				document.write("날짜 :" + new Date(2022,10,25) +"<br>");
+				document.write("날짜 :" + new Date(22,10,25) +"<br>");
+				document.write("날짜 :" + new Date(2022,10,25,09,30) +"<br>");
+				document.write("날짜 :" + new Date(2022,10,25,09,30,45) +"<br>");
+				document.write("<hr>");
+				
+				
+				// . toDateString()는 보기 쉬운 날짜형식으로 변경
+				document.write("날짜 :" + new Date().toDateString() +"<br>");
+				document.write("날짜 :" + new Date(2022,10,25).toDateString() +"<br>");
+				document.write("날짜 :" + new Date(22,10,25).toDateString() +"<br>");
+				document.write("날짜 :" + new Date(2022,10,25,09,30).toDateString() +"<br>");
+				document.write("날짜 :" + new Date(2022,10,25,09,30,45).toDateString() +"<br>");
+				document.write("<hr>");
+			
+
+				document.write("날짜(년도) :" + new Date().getFullYear() + "<br>" );
+				document.write("날짜(월) :" + (new Date().getMonth()+1)+"<br>");
+				document.write("날짜(일) :" + new Date().getDate()+"<br>" );
+				document.write("날짜(시) :" + new Date().getHours() + "<br>");
+				document.write("날짜(분) :" + new Date().getMinutes() + "<br>");
+				document.write("날짜(초) :" + new Date().getSeconds()+"<br>" );
+				document.write("날짜(요일) :"+ new Date().getDay()+"<br>"); // 0=> 일요일 
+				
+						
+</script>
+			
+</head>
+<body>
+
+</body>
+</html>

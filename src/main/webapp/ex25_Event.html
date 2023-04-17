@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event : onclick</title>
+<script type="text/javascript">
+
+				function test1() {
+					var now = new Date();
+					var s = now.getFullYear() + "," + (now.getMonth()+1)+ "," +now.getDate()+
+					"," + now.getHours()+ "," +now.getMinutes()+","+ now.getSeconds();// 달은 0부터 10일 이니까 +1 년원일시분초
+					
+					document.getElementById("clock1").innerHTML = s;     // s 에 넣겟다
+					
+				}
+				function test2() {
+						document.getElementById("clock2").innerHTML = new Date() ;
+				}
+				function test3() {
+					//document.getElementById("clock3").innerHTML = new Date().toLocaleDateString();  // 날짜만!
+					//document.getElementById("clock3").innerHTML = new Date().toLocaleTimeString(); // 시간만
+					document.getElementById("clock3").innerHTML = new Date().toLocaleString(); // 년원일 시간 다나옴!
+					
+				}
+
+</script>
+
+
+</head>
+<body>
+			<h2><span id="clock1"></span></h2>
+			<h2><span id="clock2"></span></h2>
+			<h2><span id="clock3"></span></h2>
+			
+			<hr>
+			
+			
+			
+			<button onclick="test1()" > 시계1</button>
+			<button onclick="test2()" > 시계2</button>
+			<button onclick="test3()" > 시계3</button>
+
+			
+
+</body>
+</html>

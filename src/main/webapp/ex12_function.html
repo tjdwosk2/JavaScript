@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+
+<script type="text/javascript">
+		test1(); // 미리만들어지고 호출  //선언
+		
+		function test1() {
+			document.write("Hi~~~~")
+		}
+		function test1() {
+			document.write("Hello~~~~")
+		}
+		//	test1();
+			
+		document.write("<br>");
+
+</script>
+<script type="text/javascript">
+		
+		// test1(); 호출가능// 익명
+		//test2(); //  호출 불가능 만들고 호출해야함 .
+		
+		var test2 = function() {
+			document.write("Hi!!!");
+		}
+		var test2 = function() {
+			document.write("Hello!!!!!")
+		}
+		
+		test2();
+
+</script>
+	<script type="text/javascript">
+			test3();
+					function test3() {
+						document.write("Hi ^^");
+					}
+					
+					var test3 = function() {
+						document.write("Hello ^^");
+						
+						
+					}
+						test3();
+						
+	</script>
+	
+			<script type="text/javascript">
+					
+			
+				test4();
+					var test4 = function() {
+						document.write("Hello **");
+						
+						
+					}
+					function test4() {
+						document.write("Hi **");
+					}
+					
+					test4();
+	</script>
+	
+	
+</head>
+<body>
+	<script type="text/javascript">
+	
+		// 	test1(); 호출가능
+	
+	</script>
+
+</body>
+</html>

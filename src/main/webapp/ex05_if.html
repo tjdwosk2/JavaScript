@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건문 : if</title>
+		<script type="text/javascript">
+		// 자와 같은 문법을 사용한다.
+		/*
+		
+		if(조건식){조건이 참일 때 실행;}
+		
+		
+		if(조건식){조건이 참일 때 실행;}
+		}else{ 조건이 거짓일때 실행;}		
+		
+		if(조건식1){조건이 참일 때 실행;}
+	}else if(조건식){ 조건식1은  거짓이면서 조건식2가 참일때 실행;}	
+		
+		if(조건식1){조건이 참일 때 실행;}
+	}else if(조건식){ 조건식1은  거짓이면서 조건식2가 참일때 실행;
+	}esle{조건식 1,2 가 모두 거짓일때 }
+	*/
+	
+	// 어떤 숫자 k1이 홀수 인지 , 짝수인지 판별하자 .
+	var k1 = 7;
+	
+	if (k1 % 2 ==1) {
+		document.write("결과 :홀수"); 
+		
+	}else{
+		document.write("결과 :짝수");
+		
+	}
+	document.write("<br>");
+	document.write("<hr>");
+	
+	
+	// k2이 1 또는 3 이면  남자 , 2 또는 4이면 여자 
+	
+	var k2 =3;
+	
+	if (k2 == 1 || k2==3) {
+		document.write("결과 :남자"); 
+		
+	}else if (k2 == 2|| k2==4){
+		document.write("결과 :여자"); 
+	}
+	
+	document.write("<br>");
+	document.write("<hr>");
+	
+	
+	//연봉인상이 100 보다 작다면 "회사를 바로 그만두고 이직 준비한다 ." "
+	// 그렇지 않고 , 연봉인상이 200원 정도면 "3개월 후에 회사를 그만두고 , 닭집 차린다.""
+	// 그렇지 않고 , 연봉인상이 500원 정도면 " 그냥다녀본다"
+	// 그러지 않고 , 연봉인상이 1000원 이상이면 " 완전 내회사 , 회사에 충성하여 다닌다.""
+	
+	var pay = 1000;
+	var res2  ;
+	if (pay<100) {
+		res2 = "회사를 바로 그만두고 이직 준비한다.";
+		
+	}else if(pay<=200){
+			res2 = "3개월 후에 회사를 그만두고 , 닭집 차린다" ;
+			
+	}else if(pay<=500){
+			res2 = "그냥다녀본다" ;
+			
+	}else if(pay>=1000){
+			res2 = "완전 내회사 , 회사에 충성하여 다닌다." ;
+			
+	}
+	document.write("<p>결과 :" + res2 + "</p>");
+	
+	
+	
+	
+	
+		
+		</script>
+</head>
+<body>
+
+</body>
+</html>
